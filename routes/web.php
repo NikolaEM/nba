@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\TeamsController;
 
 
@@ -18,3 +18,4 @@ use App\Http\Controllers\TeamsController;
 
 Route::get('/', [TeamsController::class, 'index']);
 Route::get('/show/{team}', [TeamsController::class, 'show']);
+Route::get('/players/{player}', [PlayerController::class, 'show']);

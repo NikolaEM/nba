@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Player;
+use App\Models\Team;
 
 class PlayerController extends Controller
 {
@@ -43,10 +45,11 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    public function show(Player $player){
+        // eager load
+       
+        return view('players.index', compact('player'));
+      }
 
     /**
      * Show the form for editing the specified resource.

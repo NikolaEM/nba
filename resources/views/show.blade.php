@@ -6,7 +6,7 @@
 <h3>{{$team->city}}</h3>
 
 @foreach($players as $player)
-<p>{{$player->first_name}} {{$player->last_name}}</p>
+<a href="/players/{{$player->id}}"><p>{{$player->first_name}} {{$player->last_name}}</p></a>
 @endforeach
 @endsection
 
